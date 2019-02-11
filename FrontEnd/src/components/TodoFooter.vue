@@ -1,0 +1,35 @@
+<template>
+    <div class="clearAllContainer">
+        <span class="clearAllBtn shadow" v-on:click="clearTodo">Clear All</span>
+    </div>
+</template>
+
+<script>
+import Modal from './common/Modal.vue'
+
+export default {
+    methods:{
+        clearTodo: function() {
+            this.$emit('clearAll')
+        }
+    },
+    components: {
+        Modal: Modal
+    }
+}
+</script>
+
+<style scoped>
+.clearAllContainer{
+    width: 8.5rem;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.clearAllBtn{
+    color: #e20303;
+    display: block;
+}
+</style>
