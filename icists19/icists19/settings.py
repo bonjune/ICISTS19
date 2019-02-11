@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # By running makemigrations, you're telling Django that you've made some changes to your models.
 
 INSTALLED_APPS = [
+    'participant_manager.apps.ParticipantManagerConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -54,8 +55,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# This config makes the root url direct to the icists19/urls.py (There is a urlpatterns -- list)
+# And Django will transverse the patterns in order.
 ROOT_URLCONF = 'icists19.urls'
 
+
+# Project's Templates Setting describes how Djnago will laod and render templates.
+# The default settings file configures a DjnagoTemplates backend whose APP_DIRS option is set to True.
+# By Convention DjangoTemplates looks for a templates subdirectory in each of the INSTALLED APPS.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
