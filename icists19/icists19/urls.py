@@ -29,3 +29,6 @@ urlpatterns = [
 ]
 
 
+admin.site.site_header = 'ICISTS Admin'
+admin.site.site_title = 'Portal'
+admin.site.index_title = 'ICIST Admin'
