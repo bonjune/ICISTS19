@@ -1,4 +1,4 @@
-# ICISTS
+# 2019-ICISTS
 
 ## 목차
 
@@ -98,4 +98,6 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 2. 모든 내용들을 MarkDown 문법으로 바꿀 계획 중
    - 수정, 보완에 장점이 있을 듯
 3. pages에 다양한 기능들이 있음.
-4. contact us 정보, 메인 페이지 2019로 변경
+4. contact us 맨 위에 내용 추가 및 회장 번호 추가
+5. 메인 페이지 2019로 변경
+6. Recruiting 페이지 업데이트
