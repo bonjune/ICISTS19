@@ -23,8 +23,9 @@
 
 <장고 프레임워크 간단 설명>
 장고 프레임워크는 MVC 패턴을 따릅니다. MVC는 모델, 뷰, 컨트롤러를 말합니다. 모델은 DB를 관리하며, 뷰는 웹페이지에 노출되는 내용을 관리합니다. 컨트롤러는 모델과 뷰에 명령을 내리는 역할을 합니다. 장고 앱에서는 사실상 models.py가 모델 부분을, templates 디렉터리가 뷰 부분을, views.py가 컨트롤러를 담당합니다. (이름을 혼동하지 마십시오.) models.py 에서는 관계형 DB의 구조를 설정(SQL의 column name 등)을 설정할 수 있으며, templates에서는 웹 페이지의 구조를 저장하며, 스크립트를 통해 특정 요소를 노출시킬지 말지 결정할 수 있습니다. views.py 에서는 위에서 설정한 내용들을 execute할 함수들을 정의합니다.  
-urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostname>/<year>/<month>/<day>/<index>와 같이 사용자가 알아보기 쉽도록 url pattern을 구성할 수 있습니다. 또한 admin.py 에서는 장고가 자동으로 제공하는 admin 페이지에서 DB를 관리할 수 있도록 설정합니다. polls 튜토리얼을 진행하면서 내용들을 주석으로 정리해놓았으니 참고바랍니다.
+urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostname>/<year>/<month>/<day>/<index>와 같이 사용자가 알아보기 쉽도록 url pattern을 구성할 수 있습니다. 또한 admin.py 에서는 장고가 자동으로 제공하는 admin 페이지에서 DB를 관리할 수 있도록 설정합니다. polls 튜토리얼을 진행하면서 내용들을 주석으로 정리해놓았으니 참고바랍니다.  
 [AWS를 이용한 장고 프로젝트 배포](https://nachwon.github.io/django-deploy-1-aws/)
+
 ---
 
 ---
