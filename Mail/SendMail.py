@@ -45,7 +45,7 @@ for i in now.rows:
     adress.append(i[3].value)
     print(type(i[3].value))
     print(i[3].value)
-    msg['Subject'] = '19TD Test Mail'
+    msg['Subject'] = '19CP Fighting'
     msg['From'] = me
     msg['To'] = you
     google_server.sendmail('icists@icists.org', adress, msg.as_string())
