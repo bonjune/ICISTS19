@@ -8,6 +8,12 @@
 
 [3.메인 홈페이지](#squarespace)
 
+[4.기타](#ETC)
+
+​	[1.Mail](https://github.com/TheStarkor/ICISTS19/tree/master/Mail)
+
+___
+
 ## Front-End
 
 개발 과정의 작업일지와 당면한 다양한 문제들, 해결과정을 정리하는 편이 인수인계 과정에서 좋을 것 같아서 정리합니다. 그리고 진행하는 과정에서 다양한 팁이 존재한다면 따로 정리해두도록 하겠습니다.
@@ -83,7 +89,6 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 인터페이스 서버 : 인터페이스 call을 백 서버의 controller에 전달. 또한 백 서버의 view를 웹 서버를 전달.  
 백 서버 : controller의 작동을 통해 model, view 제어. 
 
-
 ---
 * date : 2019-02-13
 * author : Bongjun Jang
@@ -139,3 +144,10 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 4. contact us 맨 위에 내용 추가 및 회장 번호 추가
 5. 메인 페이지 2019로 변경
 6. Recruiting 페이지 업데이트
+
+___
+
+## ETC
+
+[1. Mail](https://github.com/TheStarkor/ICISTS19/tree/master/Mail)
+
