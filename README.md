@@ -100,26 +100,26 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
    the server stack is composed of 3 layers: Nginx, uWSGI, Django. Nginx is web server, uWSGI is interface, and Django is back-end server.
    Client <-> nginx <-> uWSGI <-> Django
 - file system summary :
-   all server files are at /srv
-/srv
-└── icists19
-    ├── front
-    │   ├── migrations
-    │   └── __pycache__
-    ├── icists19
-    │   └── __pycache__
-    ├── participant_manager
-    │   ├── migrations
-    │   │   └── __pycache__
-    │   ├── __pycache__
-    │   └── templates
-    │       └── participant_manager
-    └── polls
-        ├── migrations
-        │   └── __pycache__
-        ├── __pycache__
-        └── templates
-            └── polls
+   all server files are at /srv  
+/srv  
+└── icists19  
+    ├── front  
+    │   ├── migrations  
+    │   └── __pycache__  
+    ├── icists19  
+    │   └── __pycache__  
+    ├── participant_manager  
+    │   ├── migrations  
+    │   │   └── __pycache__  
+    │   ├── __pycache__  
+    │   └── templates  
+    │       └── participant_manager  
+    └── polls  
+        ├── migrations  
+        │   └── __pycache__  
+        ├── __pycache__  
+        └── templates  
+            └── polls  
 
 ---
 
