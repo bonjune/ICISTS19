@@ -6,13 +6,13 @@
 
 /etc/nginx/sites-enabled
 /etc/nginx/sites-available
-<django-project>/.config/nginx/mysite.conf
+"django-project"/.config/nginx/mysite.conf
 
 ### uWSGI
 
-<django-project>/.config/uwsgi/mysite.ini
-<django-project>/.config/uwsgi/uwsgi.service
+"django-project"/.config/uwsgi/mysite.ini
+"django-project"/.config/uwsgi/uwsgi.service
 
 ### Django
 
-<django-project>/<project-name>/settings.py
+"django-project"/"project-name"/settings.py
