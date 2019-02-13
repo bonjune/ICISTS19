@@ -81,7 +81,45 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 사용자(Client) <-> 웹 서버 <-> 인터페이스 서버 <-> 백 서버  
 웹 서버 : 사용자의 HTTP, HTTPS 요청을 인터페이스로 변환하여 인터페이스 서버에 전달. 또한 인터페이스의 return을 static 파일로 변환하여 전달.  
 인터페이스 서버 : 인터페이스 call을 백 서버의 controller에 전달. 또한 백 서버의 view를 웹 서버를 전달.  
-백 서버 : controller의 작동을 통해 model, view 제어.  
+백 서버 : controller의 작동을 통해 model, view 제어. 
+
+
+---
+* date : 2019-02-13
+* author : Bongjun Jang
+
+<summary>
+1. Changed AWS EC2 Instance. You can now access the web server [here](http://ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com/).
+2. Server System Discription Below. Please Check.
+3. If you want to access the server on ssh, please let me know. I'll provide public key.
+
+<server system discription>
+- spec : aws ec2 t2.small
+   this is not suitable for providing real services. Need upgrade. Can someone find how-to?
+- server stack :
+   the server stack is composed of 3 layers: Nginx, uWSGI, Django. Nginx is web server, uWSGI is interface, and Django is back-end server.
+   Client <-> nginx <-> uWSGI <-> Django
+- file system summary :
+   all server files are at /srv
+/srv
+└── icists19
+    ├── front
+    │   ├── migrations
+    │   └── __pycache__
+    ├── icists19
+    │   └── __pycache__
+    ├── participant_manager
+    │   ├── migrations
+    │   │   └── __pycache__
+    │   ├── __pycache__
+    │   └── templates
+    │       └── participant_manager
+    └── polls
+        ├── migrations
+        │   └── __pycache__
+        ├── __pycache__
+        └── templates
+            └── polls
 
 ---
 
