@@ -34,14 +34,21 @@ google_server.ehlo()
 google_server.login('bsho0330@gmail.com', 'cfkysjidlmtewsvq')
 
 #메일 전송
+first = True
 for i in now.rows:
-    print(type(i[3].value))
-    contents = i[3].value
+    if(first) :
+        first = False
+        continue
+    contents = i[2].value
     msg = MIMEText(contents, _charset="UTF-8")
+    adress = []
+    adress.append(i[3].value)
+    print(type(i[3].value))
+    print(i[3].value)
     msg['Subject'] = '19TD Test Mail'
     msg['From'] = me
     msg['To'] = you
-    google_server.sendmail('icists@icists.org', ['sk_and_mc@naver.com'], msg.as_string())
+    google_server.sendmail('icists@icists.org', adress, msg.as_string())
 
 #서버 종료
 google_server.quit()
