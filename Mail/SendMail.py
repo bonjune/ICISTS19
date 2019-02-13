@@ -31,7 +31,7 @@ google_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 google_server.ehlo()
 
 #앱 비밀번호는 기기에 맞는 App password를 입력해주어야 함.
-google_server.login('bsho0330@gmail.com', 'cfkysjidlmtewsvq')
+google_server.login('bsho0330@gmail.com', 'password')
 
 #메일 전송
 first = True
