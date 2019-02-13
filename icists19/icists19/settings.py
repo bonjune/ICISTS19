@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+ROOT_DIR = BASE_DIR
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -26,8 +26,9 @@ SECRET_KEY = '-_nl)!1ln0-to4*6&bf6mdti+id71@g97c(x67clw1gy8ciup$'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '13.125.123.82',
+    '127.0.0.1',
+    '54.180.8.50',
+    'ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com', 
 ]
 
 
@@ -134,3 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
