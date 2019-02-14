@@ -1,54 +1,64 @@
 import openpyxl
 import smtplib
 from email.mime.text import MIMEText
+import pdb
 
-#엑셀 데이터 로딩
+#### check before running
+excelname= "contents.xlsx"
+userid = 'media@icists.org'
+userpw = 'icistsmed2005'
 
-test = openpyxl.load_workbook(filename = "test.xlsx")
-te = test.active
-now = test['Sheet1']
+#read excel file
+excelf = openpyxl.load_workbook(filename= excelname)
+excel = excelf.active
 
-# ok = False
-# for i in now.rows:
-#     if(i[0].value == '#'):
-#         ok = True
-#         continue
-#     if(ok == True):
-#         print(i[0].value, i[3].value)
+sheet = excelf['Sheet1']
 
-# 메일 전송
-
-me = 'icists@icists.org'
-you = 'sk_ans_mc@kaist.ac.kr'
-
-# msg = MIMEText(contents, _charset="UTF-8")
-# msg['Subject'] = 'test'
-# msg['From'] = me
-# msg['To'] = you
-
-#포트 연결 및 암호화
 google_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 google_server.ehlo()
+google_server.login(userid, userpw)
 
-#앱 비밀번호는 기기에 맞는 App password를 입력해주어야 함.
-google_server.login('bsho0330@gmail.com', 'password')
 
-#메일 전송
-first = True
-for i in now.rows:
-    if(first) :
-        first = False
+#line[#, txt format number, mail address, subject, argument)
+for line in sheet.rows:
+    if line[0].value == '#' or line[1].value==None:
         continue
-    contents = i[2].value
-    msg = MIMEText(contents, _charset="UTF-8")
-    adress = []
-    adress.append(i[3].value)
-    print(type(i[3].value))
-    print(i[3].value)
-    msg['Subject'] = '202020'
-    msg['From'] = me
-    msg['To'] = you
-    google_server.sendmail('icists@icists.org', adress, msg.as_string())
+    
+    with open('mail%s.txt'%(str(line[1].value)), 'r') as f:
+        contents = f.read()
+    
+    args = line[4].value.split(',')
+    
+    if len(args) != contents.count('[]'):
+        print("Error with count of argument!! There are %d in txt but there are %d arguments in xlsx\nCheck %s's arguments"%(len(args), contents.count('[]'),line[2].value))
+        continue
 
-#서버 종료
-google_server.quit()
+    for arg in args:
+        contents = contents.replace('[]', arg.lstrip(), 1)
+
+    recipients = line[2].value
+
+    msg= MIMEText(contents, _charset = 'UTF-8')
+    msg['Subject'] = line[3].value
+    msg['To'] = recipients
+
+    print('Email Preview')
+    print('Subject : %s'%msg['Subject'])
+    print('From: %s'%userid)
+    print('To: %s'%recipients)
+    print('Contents:\n%s'%contents)
+
+    chk = input("Check and sending email! Is it alright?(yes or no)")
+    if chk.lower() == 'yes':
+    	google_server.sendmail(userid, recipients.split(','), msg.as_string())
+
+
+'''
+    msg = MIMEText(contents, _charset= 'UTF-8')
+    #contents -> body of mail
+    msg['Subject'] -> title of mail
+    msg['From'] -> cannot see in email
+    msg['To'] -> seeing in mail
+    
+    google_server.sendmail(id, address, msg.as_string()) -> id : not using, address -> get mail , msg -> header of mail)
+'''
