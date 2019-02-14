@@ -1,11 +1,11 @@
 ## 사용법
 
 0. 사용할 id로 로그인 한 후 
-    google account > 보안 > 보안 수준이 낮은 앱의 액세스 > 액세스 사용 설정 (권장하지 않음) > 사용함
-    사용함으로 활성화 시키기
+    google account > 보안 > 보안 수준이 낮은 앱의 액세스 > 액세스 사용 설정 (권장하지 않음) > 사용함 <br/>
+    위를 따라가며 액세스 가능하도록 활성화 시키기
 1. SendMail.py 파일 내용을 Copy & Paste 한 후 메모장이나 ide에 붙여넣고 저장한다.
-2. SendMail.py의 line 8, 9를 본인의 ID, App Password로 수정한다.
-3. py 파일과 같은. 경로에 contents.xlsx 파일을 둔다.
+2. SendMail.py의 line **8, 9**를 본인의 ID, App Password로 수정한다.
+3. py 파일과 같은 경로에 contents.xlsx 파일을 둔다.
 
 |    #    | Format. Number | Mail Address |  Subject   |    Arguments    |
 | :--------: | :-----------: | :---------------: | :---------: | :-----------------: |
@@ -27,20 +27,20 @@ python3 SendMail.py
 email 제목, 내용, 수신자, 발신자를 확인한 후 맞으면 yes, 틀렸다면 no 를 입력하면 메일 전송됨!
 
 ### 참고
-directory 구조
-./mail
-    |_ SendMail.py
-    |_ contents.xlsx
-    |_ mail0.txt
-    |_ mail1.txt
-    |_ ...
+0. directory 구조
+./mail <br/>
+    |_ SendMail.py <br/>
+    |_ contents.xlsx <br/>
+    |_ mail0.txt <br/>
+    |_ mail1.txt <br/>
+    |_ .. <br/>
     
-Requirements
+1. Requirements
 ```
 openpyxl
 ```
 
-환경
+2. 환경
 python3.7.0
 ___
 
