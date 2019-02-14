@@ -38,19 +38,19 @@ for line in sheet.rows:
 
     recipients = line[2].value
 
-msg= MIMEText(contents, _charset = 'UTF-8')
-msg['Subject'] = line[3].value
-msg['To'] = recipients
+    msg= MIMEText(contents, _charset = 'UTF-8')
+    msg['Subject'] = line[3].value
+    msg['To'] = recipients
 
-print('Email Preview')
-print('Subject : %s'%msg['Subject'])
-print('From: %s'%userid)
-print('To: %s'%recipients)
-print('Contents:\n%s'%contents)
+    print('Email Preview')
+    print('Subject : %s'%msg['Subject'])
+    print('From: %s'%userid)
+    print('To: %s'%recipients)
+    print('Contents:\n%s'%contents)
 
-chk = input("Check and sending email! Is it alright?(yes or no)")
-if chk.lower() == 'yes':
-    google_server.sendmail(userid, [recipients], msg.as_string())
+    chk = input("Check and sending email! Is it alright?(yes or no)")
+    if chk.lower() == 'yes':
+    	google_server.sendmail(userid, recipients.split(','), msg.as_string())
 
 
 '''
@@ -61,4 +61,4 @@ if chk.lower() == 'yes':
     msg['To'] -> seeing in mail
     
     google_server.sendmail(id, address, msg.as_string()) -> id : not using, address -> get mail , msg -> header of mail)
-    '''
+'''
