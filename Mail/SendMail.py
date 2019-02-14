@@ -23,12 +23,12 @@ google_server.login(userid, userpw)
 for line in sheet.rows:
     if line[0].value == '#' or line[1].value==None:
         continue
-    
+
     with open('mail%s.txt'%(str(line[1].value)), 'r') as f:
         contents = f.read()
-    
+
     args = line[4].value.split(',')
-    
+
     if len(args) != contents.count('[]'):
         print("Error with count of argument!! There are %d in txt but there are %d arguments in xlsx\nCheck %s's arguments"%(len(args), contents.count('[]'),line[2].value))
         continue
@@ -59,6 +59,6 @@ for line in sheet.rows:
     msg['Subject'] -> title of mail
     msg['From'] -> cannot see in email
     msg['To'] -> seeing in mail
-    
+
     google_server.sendmail(id, address, msg.as_string()) -> id : not using, address -> get mail , msg -> header of mail)
 '''

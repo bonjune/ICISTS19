@@ -481,6 +481,11 @@ header::before {
 }
 
 .cd-main-content {
+/*  comming soon만 적용 */
+  background-image: url('../img/main.png');
+  background-size: auto 100%;
+  background-position: center;
+/*    */
   position: relative;
   z-index: 2;
   min-height: 100vh;
@@ -499,6 +504,9 @@ header::before {
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-content {
+/*     coming soon */
+    background-size: 100%;
+/*      */
     padding-top: 80px;
   }
   .cd-main-content.nav-is-visible {
@@ -580,9 +588,9 @@ header::before {
 
 .bgimg {
   /* Background image */
-  background-image: url('/img/main.jpg');
+  background-image: url('../img/main.png');
   /* Full-screen */
-  height: 300%;
+  height: 100%;
   /* Center the background image */
   background-position: center;
   /* Scale and zoom in the image */
@@ -606,5 +614,19 @@ header::before {
 }
 
 .comings {
+    color: white;
     font-size: 2.5rem;
+}
+
+#demo {
+    color: white;
+    font-size: 2.5rem;
+}
+@media only screen and (min-width: 1024px) {
+    .comings {
+        font-size: 5rem;
+    }
+    #demo {
+        font-size: 5rem;
+    }
 }
