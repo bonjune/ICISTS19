@@ -578,6 +578,33 @@ header::before {
   }
 }
 
-.cd-pad {
-    
+.bgimg {
+  /* Background image */
+  background-image: url('/img/main.jpg');
+  /* Full-screen */
+  height: 300%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 3rem;
+}
+
+.middle {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.comings {
+    font-size: 2.5rem;
 }
