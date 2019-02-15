@@ -173,6 +173,12 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 
 ---
 
+- date: 2019-02-15
+- author: 장봉준
+
+<내용>
+서버에 프론트페이지 이관. 잘 작동함.
+
 ## Squarespace
 
 ## 작업일지
@@ -189,6 +195,15 @@ urls.py에서는 장고의 url pattern을 정의합니다. 예를 들어 <hostna
 4. contact us 맨 위에 내용 추가 및 회장 번호 추가
 5. 메인 페이지 2019로 변경
 6. Recruiting 페이지 업데이트
+
+---
+
+- date: 2019-02-15
+- author: 장봉준
+
+<내용>
+1. icists.org/dev 으로 개발중인 참가자 페이지에 접속 가능.
+
 
 ___
 
