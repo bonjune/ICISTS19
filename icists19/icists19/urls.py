@@ -1,3 +1,4 @@
+#icists19/urls
 """icists19 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -22,10 +23,9 @@ def index(request):
     return HttpResponse("<h1>Home</h1>")
 
 urlpatterns = [
-    path('', index),
+    path('', include('front.urls')),
     path('admin/', admin.site.urls),
-    path('front/', include('front.urls')),
-    path('polls/', include('polls.urls'))
+    path('polls/', include('polls.urls')),
 ]
 
 

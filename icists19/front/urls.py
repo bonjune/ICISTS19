@@ -1,4 +1,4 @@
-# front/urls.py
+# front/urls
 from django.urls import path
 
 from . import views
